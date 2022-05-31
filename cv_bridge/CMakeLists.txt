@@ -8,7 +8,7 @@ if(NOT ANDROID)
 
   if(PYTHONLIBS_VERSION_STRING VERSION_LESS "3.8")
     # Debian Buster
-    find_package(Boost REQUIRED python37)
+    find_package(Boost REQUIRED python3)
   else()
     # Ubuntu Focal
     find_package(Boost REQUIRED python)
@@ -16,6 +16,8 @@ if(NOT ANDROID)
 else()
 find_package(Boost REQUIRED)
 endif()
+
+find_package(Boost REQUIRED python)
 
 set(_opencv_version 4)
 find_package(OpenCV 4 QUIET)
